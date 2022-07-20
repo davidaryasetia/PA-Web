@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/desc.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+    <title>Job Finder</title>
+    <link rel="icon" type="image/x-icon" href="img/logo1.jpg"></>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="main-after-login.html"><strong>JOB FINDER</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="main.html">Logout</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+      <div class="row">
+          <div class="col">
+                <center><h3><strong>Selamat Datang Admin !</strong></h3></center>
+          </div>
+      </div>
+        <div class="container animated fadeIn">
+            <h4>Data User</h4>
+            <!-- <?php
+                    include '../config.php';
+                    $query = "SELECT * FROM login ORDER BY id ASC";
+                    $dewan1 = $db->prepare($query);
+                    $dewan1->execute();
+                    $res1 = $dewan1->get_result();
+                    while ($row = $res1->fetch_assoc()) {
+                        $id = $row["id"];
+                        $nama = $row["nama"];
+                        if (strlen($nama) > 100) {
+                            $nama = substr($nama, 0, 100) . "...";
+                        }
+                        $username = $row["username"];
+                        if (strlen($username) > 256) {
+                            $username = substr($username, 0, 256) . "...";
+                        }
+            ?> -->
+            <table border="1" width="1000px" style="margin-top:-1%" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th width="50px"><b>
+                                <center>id</center>
+                                <center><?php echo $id;?></center>
+                            </b></th>
+                        <th width="150px"><b>
+                                <center>Nama</center>
+                                <center><?php echo $nama;?></center>
+                            </b></th>
+                        <th width="150px"><b>
+                                <center>Username</center>
+                                <center><?php echo $username;?></center>
+                            </b></th>
+                        <th width="150px"><b>
+                                <center>E-mail</center>
+                                <center><?php echo $username;?></center>
+                            </b></th>
+                            <th width="150px"><b>
+                                <center>Tempat Tanggal Lahir</center>
+                                <center><?php echo $username;?></center>
+                            </b></th>
+                        <th width="90px"><b>
+                                <center><a href="../hapus.php?id=<?php echo $id; ?>"><i  class="fas fa-trash-alt"></i></a></center>
+                            </b></th>
+                    </tr>
+                </thead>
+            </table>
+            <?php }?>
+        </div>
+        <div class="container animated fadeIn">
+            <h4>Data Perusahaan</h4>
+            <!-- <?php
+                    include '../config.php';
+                    $query = "SELECT * FROM buku ORDER BY id ASC";
+                    $dewan1 = $db->prepare($query);
+                    $dewan1->execute();
+                    $res1 = $dewan1->get_result();
+                    while ($row = $res1->fetch_assoc()) {
+                        $id = $row["id"];
+                        $foto = $row["foto"];
+                        $judul = $row["judul"];
+                        if (strlen($judul) > 100) {
+                            $judul = substr($judul, 0, 100) . "...";
+                        }
+                        $ciptaan = $row["ciptaan"];
+                        if (strlen($ciptaan) > 256) {
+                            $ciptaan = substr($ciptaan, 0, 256) . "...";
+                        }
+            ?> -->
+                <table border="1" width="1000px" style="margin-top:-1px" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th width="50px"><b>
+                                    <center>ID Perusahaan</center>
+                                    <center><?php echo $id;?></center>
+                                </b></th>
+                            <th width="150px"><b>
+                                    <center>Nama Perusahaan</center>
+                                    <center><?php echo $judul;?></center>
+                                </b></th>
+                            <th width="150px"><b>
+                                    <center>Nomor Telepon</center>
+                                    <center><?php echo $judul;?></center>
+                                </b></th>
+                            <th width="150px"><b>
+                                    <center>Jenis Usaha</center>
+                                    <center><?php echo $judul;?></center>
+                                </b></th>
+                            <th width="150px"><b>
+                                    <center>Alamat Lengkap</center>
+                                    <center><?php echo $ciptaan;?></center>
+                                </b></th>
+                            <th width="90px"><b>
+                                    <center><a href="../hapus-gambar.php?id=<?php echo $id; ?>"><i  class="fas fa-trash-alt"></i></a></center>
+                          </b></th>
+                        </tr>
+                    </thead>
+                </table>
+            <?php }?>
+        </div>  
+  </body>
+</html> 

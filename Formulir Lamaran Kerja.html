@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Job Finder</title>
+    <link rel="icon" type="image/x-icon" href="img/logo1.jpg"></>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Formulir Lamaran Kerja</h2>
+                </div>
+                <div class="card-body">
+                    <form id="form" method="POST" action="input.php" enctype="multipart/form-data">
+                        <div class="form-row m-b-55">
+                            <div class="name">Nama</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nama_depan" id="nama_depan" placeholder="Masukkan nama depan"> 
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="nama_belakang" id="nama_belakang" placeholder="Masukkan nama belakang">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Tempat Lahir</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="tempat_lahir" id="tempat_lahir" placeholder="Masukkan Tempat Lahir">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-row">
+                            <div class="name">Tanggal Lahir</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="date" name="tanggal_lahir" id="tanggal_lahir" placeholder="Masukkan Tanggal lahir ex (24-Februari-2000)">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-row">
+                            <div class="name">Alamat Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email"id="email" placeholder="example@email.com">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Nomer Telepon</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="phone" id="phone" placeholder="Masukkan Nomer Telepon">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Posisi yang Dilamar</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="posisi" id="posisi" placeholder="Masukkan Posisi Pekerjaan yang ingin dilamar">
+                                </div>
+                            </div>
+                        </div>
+						
+						            <div class="form-row">
+                            <div class="name">Alamat Lengkap</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="input--style-5" name="alamat" id="alamat" rows="2" cols="49" placeholder="Masukkan Alamat Lengkap Anda"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-row">
+                            <div class="name">Upload CV</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_cv" id="file_cv">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Upload Photo Data Diri</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_photo" id="file_photo">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Jenis Kelamin</label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">Laki-laki
+                                    <input type="radio" checked="checked" name="jenis_kelamin" id="laki-laki" value="laki-laki" >
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Perempuan
+                                    <input type="radio" name="jenis_kelamin" id="jenis_kelamin" id="perempuan" value="perempuan">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-row p-t-15">
+                            <label class="label label--block">Pendidikan Terakhir</label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">SMA
+                                    <input type="radio" checked="checked" name="pendidikan_terakhir" id="SMA" value="SMA" >
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container m-r-55">D3
+                                    <input type="radio" checked="checked" name="pendidikan_terakhir" id="D3" value="D3" >
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container m-r-55">D4
+                                    <input type="radio" checked="checked" name="pendidikan_terakhir" id="D4" value="D4" >
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container m-r-55">S1
+                                    <input type="radio" checked="checked" name="pendidikan_terakhir" id="S1" value="S1" >
+                                    <span class="checkmark"></span>
+                                </label>           
+                            </div>
+                        </div>
+                        <div>
+                          <a href="main-after-login.html" class="">
+                            <button class="btn btn--radius-2 btn--red" type="submit" name="submit" value="submit">Kirim Form Lamaran</button>
+                          </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+  .error {
+    color: red;
+  }
+</style>
+
+
+    <script>
+  $(document).ready(function () {
+    $('#form').validate({
+      rules: {
+        nama_depan: {
+          minlength: 3,
+          required: true
+          
+        },
+
+        nama_belakang: {
+          required: true,
+          minlength: 5
+        },
+
+        tempat_lahir: {
+          required: true,
+          minlength: 6
+        },
+
+        tanggal_lahir: {
+          required: true,
+          
+        },
+
+        email: {
+          required: true,
+          email: true
+        },
+
+
+        phone: {
+          required: true,
+          rangelength: [10, 14],
+          number: true
+        },
+
+        posisi: {
+          required: true,
+          minlength: 10
+        },
+        
+        alamat: {
+          required: true,
+          minlength: 10
+        }, 
+
+        file_cv: {
+          required: true,
+          extension: "docx|rtf|doc|pdf"
+        }, 
+
+        file_photo: {
+          required: true,
+          extension: "jpg|jpeg"
+        }
+        
+        
+      },
+      messages: {
+
+        nama_depan: {
+          required: 'Tolong Masukkan Nama Depan Anda !',
+          first_name: 'Minimal Karakter Nama Depan 3 karakter',
+        },
+
+        nama_belakang: {
+          required: 'Tolong Masukkan Nama Depan Anda !',
+          last_name: 'Minimal Karakter Nama Belakang 5 karakter',
+        },
+
+        tempat_lahir: {
+          required: 'Tolong Masukkan Tempat Lahir Anda!',
+          place_birth: 'Minimal Karakter Tempat Lahir 6 kata',
+        },
+
+        tanggal_lahir: {
+          required: 'Tolong Masukkan tanggal lahir Anda !',
+          email: 'Tolong Masukkan Tanggal Lahir Sesuai Format !',
+        },
+
+        email: {
+          required: 'Tolong Masukkan Email Anda !',
+          email: 'Tolong Masukkan Email yang valid',
+        },
+
+        phone: {
+          required: 'Tolong Masukkan Nomer Telepon Anda ! ',
+          rangelength: 'Nomor Telepon Anda Minimal Harus 10 digit dan Maximal 14 digit'
+        },
+
+        posisi: {
+          required: 'Tolong Masukkan Posisi Pekerjaan yang Ingin Anda Lamar',
+          minlength: 'Posisi Pekerjaan Minimal Harus Memuat 10 karakter.',
+        },
+
+        alamat: {
+          required: 'Tolong Masukkan Alamat Rumah Anda',
+          minlength: 'Posisi Alamat Rumah Minimal Harus Memuat 10 karakter.',
+        },
+
+        file_cv: {
+          required: 'Tolong Masukkan Berkas CV Anda !',
+          extension: 'Tolong Masukkan Berkas CV Anda sesuai ekstensi file.',
+        },
+
+        file_photo: {
+          required: 'Tolong Masukkan Berkas Foto Data Diri Anda !',
+          extension: 'Tolong Masukkan Berkas Data Diri Anda sesuai ekstensi file.',
+        }        
+
+      },
+
+
+      submitHandler: function (form) {
+        form.submit();
+      }
+      
+    });
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.jumbotron{
+    background-color: #f8f9fa;
+}
+h2{
+    line-height: 2;
+}
+.navbar-brand{
+    font-family: 'Viga', sans-serif;
+    font-size: 32px;
+}
